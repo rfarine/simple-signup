@@ -18,7 +18,7 @@ h1 {
 
 input[type='text'],
 input[type='submit'] {
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 2px;
 }
 
@@ -77,4 +77,12 @@ input[type='submit']:hover {
   color: white;
   font-size: 1.25em;
   font-weight: 600;
+}
+
+input[type='text'].invalid {
+  border-color: #FF8F6D;
+}
+
+.creditCardHighlight {
+  text-decoration: underline;
 }
