@@ -1,0 +1,80 @@
+body {
+  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #01A9ED;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 960px;
+}
+
+h1 {
+  font-size: 3em;
+  color: white;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+}
+
+input[type='text'],
+input[type='submit'] {
+  border: 0;
+  border-radius: 2px;
+}
+
+input[type='text'] {
+  font-size: 1.25em;
+  padding: 1em;
+}
+
+input[type='text']:focus {
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+input[type='submit'] {
+  display: block;
+  margin: 0.5em auto;
+  padding: 1.4em;
+  background-color: #FF8F6D;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: inset 0 -1px 1px rgba(0,0,0,.3);
+  -webkit-transition: background 0.25s ease-in-out;
+  -moz-transition: background 0.25s ease-in-out;
+  -ms-transition: background 0.25s ease-in-out;
+  -o-transition: background 0.25s ease-in-out;
+  transition: background 0.25s ease-in-out;
+}
+
+input[type='submit']:hover {
+  background-color: #ff7f59;
+  cursor: pointer;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: #CCC;
+}
+
+.creditCards {
+  list-style-type: none;
+  padding: 0;
+}
+
+.creditCards > li {
+  display: inline-block;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 600;
+}
