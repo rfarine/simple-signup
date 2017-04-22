@@ -86,3 +86,51 @@ input[type='text'].invalid {
 .creditCardHighlight {
   text-decoration: underline;
 }
+
+.hidden {
+  height: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.successContainer {
+  -webkit-transition: opacity 1.5s ease-in-out;
+  -moz-transition: opacity 1.5s ease-in-out;
+  -ms-transition: opacity 1.5s ease-in-out;
+  -o-transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.successImage {
+  position: fixed;
+}
+
+.imageFirstClick {
+  top: 0;
+  right: 0;
+}
+
+.imageSecondClick {
+  top: auto;
+  right: auto;
+  left: 0;
+  bottom: 0;
+}
+
+.imageThirdClick {
+  top: 0;
+  right: auto;
+  left: 0;
+  bottom: auto;
+}
+
+.imageFourthClick {
+  top: auto;
+  right: 0;
+  left: auto;
+  bottom: 0;
+}

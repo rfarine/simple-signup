@@ -7,21 +7,27 @@
   </head>
   <body>
     <div class='container'>
-      <h1>Buy Now!</h1>
+      <div id='formContainer'>
+        <h1>Buy Now!</h1>
 
-      <form id='form'>
-        <input id='fuzzyBunny' name='fuzzyBunny' type='text' placeholder='Fuzzy Bunny' />
-        <input id='fuzzyCat' name='fuzzyCat' type='text' placeholder='Fuzzy Cat' />
-        <input id='fuzzyDog' name='fuzzyDog' type='text' placeholder='Fuzzy Dog' />
+        <form id='form' action='javascript:;' onsubmit='onSubmitForm();'>
+          <input id='fuzzyBunny' name='fuzzyBunny' type='text' placeholder='Fuzzy Bunny' />
+          <input id='fuzzyCat' name='fuzzyCat' type='text' placeholder='Fuzzy Cat' />
+          <input id='fuzzyDog' name='fuzzyDog' type='text' placeholder='Fuzzy Dog' />
 
-        <input type='submit' value='Submit' />
-      </form>
+          <input type='submit' value='Submit' />
+        </form>
 
-      <ul class='creditCards'>
-        <li id='visa'>Visa</li>
-        <li id='mastercard'>Mastercard</li>
-        <li id='amex'>American Express</li>
-      </ul>
+        <ul class='creditCards'>
+          <li id='visa'>Visa</li>
+          <li id='mastercard'>Mastercard</li>
+          <li id='amex'>American Express</li>
+        </ul>
+      </div>
+
+      <div id='success' class='hidden successContainer'>
+        <img src='img/testImg.jpg' alt='Success' class='successImage' />
+      </div>
     </div>
 
     <script src='scripts/form.js'></script>

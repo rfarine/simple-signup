@@ -5,7 +5,10 @@ var fuzzyDog = document.getElementById('fuzzyDog');
 var visa = document.getElementById('visa');
 var mastercard = document.getElementById('mastercard');
 var amex = document.getElementById('amex');
+var formContainer = document.getElementById('formContainer');
+var successImage = document.getElementsByClassName('successImage')[0];
 var hasChanged = [];
+var errors = [];
 
 var validateInput = function validateInput(event) {
   var inputValue = event.target.value;
@@ -14,7 +17,7 @@ var validateInput = function validateInput(event) {
   var fuzzyCatIsValid = fuzzyCat.value.match(/^\d{10}$/);
   var fuzzyDogIsValid = fuzzyDog.value.match(/^[345]\d{15}$/g);
   var inputHasChanged = hasChanged.includes(inputName);
-  var errors = [];
+  errors = [];
 
   if (!inputHasChanged) {
     hasChanged.push(inputName);
@@ -86,8 +89,51 @@ var highlightCreditCard = function highlight(event) {
   }
 }
 
-Array.prototype.forEach.call(inputs, function(input) {
-  return input.addEventListener('change', validateInput);
-});
+function validateInputs() {
+  Array.prototype.forEach.call(inputs, function(input) {
+    return input.addEventListener('change', validateInput, false);
+  });
+}
 
-fuzzyDog.addEventListener('keyup', highlightCreditCard);
+function onSubmitForm() {
+  validateInputs();
+
+  if (errors.length > 0) {
+    return false;
+  }
+
+  document.getElementById('formContainer').remove();
+  document.getElementById('success').classList.remove('hidden');
+}
+
+var clickedImage = 0;
+
+var clickImage = function onClickImage(event) {
+  var image = event.target;
+  clickedImage++;
+
+  switch (clickedImage) {
+    case 1:
+      image.classList.add('imageFirstClick');
+      break;
+    case 2:
+      image.classList.add('imageSecondClick');
+      break;
+    case 3:
+      image.classList.add('imageThirdClick');
+      break;
+    case 4:
+      image.classList.add('imageFourthClick');
+      break;
+    case 5:
+      image.remove();
+      break;
+    default:
+      return false;
+      break;
+  }
+}
+
+validateInputs();
+fuzzyDog.addEventListener('keyup', highlightCreditCard, false);
+successImage.addEventListener('click', clickImage, false);
